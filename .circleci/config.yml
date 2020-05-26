@@ -14,7 +14,6 @@ jobs:
             - run: mkdir -p /tmp/core_dumps
             - run: cp -rf build /tmp/core_dumps
             - run: npm test
-            - store_artifacts: /tmp/core_dumps
 workflows:
     build-and-test:
       jobs:
