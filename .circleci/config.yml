@@ -11,10 +11,8 @@ jobs:
           steps:
             - run: npm install
             - run: npm run build
-            - run:
-              command: |
-              mkdir -p /tmp/core_dumps
-              cp -rf build /tmp/core_dumps
+            - run: mkdir -p /tmp/core_dumps
+            - run: cp -rf build /tmp/core_dumps
             - run: npm test
             - store_artifacts:
               path: /tmp/core_dumps
